@@ -24,10 +24,10 @@ console.log(cart);
     return(
         <>
          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 bg-gray-200">
-            <h1>Exam Page</h1>
+            <h1 className="font-bold">Exam Page</h1>
             <button onClick={addtocart}>Test-I</button>
             <button onClick={test2}>Test-II</button>
-            <p>Cart Items: {cart.length}</p>
+            <p className="text-blue-600 font-bold">Cart Items: {cart.length} & Test Items: {test.length}</p>
          </div>
          {
             cart.map((e , id)=>{
