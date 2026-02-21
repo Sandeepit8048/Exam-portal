@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 function Signup() {
   const [signupdata, setSignupdata] = useState([]);
 
@@ -7,13 +7,18 @@ function Signup() {
     user: "",
     password: "",
   });
+  
+  const navigate = useNavigate();
 
   useEffect(() => {
     loadData();
   }, []);
+  
+ 
 
   function loadData() {
-    const response = JSON.parse(localStorage.getItem("store"));
+     const response = JSON.parse(localStorage.getItem("store")) || [];
+     setSignupdata(response);
 
     if (response && response.length > 0) {
       setSignupdata(response);
@@ -42,6 +47,7 @@ function Signup() {
 
     if (finddata) {
       alert("Login Successful ✅");
+      navigate("/Exam");
     } else {
       alert("Wrong Username or Password ❌");
     }
@@ -59,7 +65,7 @@ function Signup() {
       <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-sm">
 
         <h2 className="text-2xl font-bold text-center mb-4">
-         Signup Page
+         Login-Page
         </h2>
 
         {/* Form */}
@@ -75,6 +81,7 @@ function Signup() {
               type="text"
               name="user"
               placeholder="Enter username"
+              value={store.user} 
               onChange={handleChange}
               className="w-full mt-1 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
@@ -92,6 +99,7 @@ function Signup() {
               name="password"
               placeholder="******"
               onChange={handleChange}
+              value={store.password}
               className="w-full mt-1 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
@@ -102,7 +110,7 @@ function Signup() {
             type="submit"
             className="w-full bg-blue-800 text-black py-2 rounded font-semibold hover:bg-blue-600 transition"
           >
-            Signup
+            Login
           </button>
 
         </form>

@@ -1,17 +1,9 @@
-import { useState } from 'react'
-import './App.css'
-import Nav from './component/Nav'
-// import Login from './component/Login'
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./component/Nav";
 
 function App() {
-
-
-
   return (
-    <>
-    <Nav/>
-    </>
+ <Nav/>
   );
 }
 

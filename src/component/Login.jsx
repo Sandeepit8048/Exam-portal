@@ -45,7 +45,7 @@ function Login() {
       <div className="bg-white shadow-xl rounded-lg p-6 w-full max-w-sm">
 
         <h2 className="text-2xl font-bold text-center mb-5 text-gray-800">
-          Login Page
+          Create-Account
         </h2>
 
         {/* Form */}
@@ -90,7 +90,7 @@ function Login() {
             type="submit"
             className="w-full bg-blue-600 text-white py-2 rounded font-semibold hover:bg-blue-700 transition"
           >
-            Login
+            Create-Account
           </button>
 
         </form>
