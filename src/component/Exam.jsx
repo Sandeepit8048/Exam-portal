@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 function Exam(){
     
 
@@ -13,7 +13,8 @@ function Exam(){
     const save = localStorage.getItem("ans");
     return save ? JSON.parse(save) : [];
   });
-
+ 
+   const navigator = useNavigate();
  useEffect(()=>{
 
      localStorage.setItem("ans", JSON.stringify(ans));
@@ -21,7 +22,9 @@ function Exam(){
      console.log(ans);
  },[ans])
 
-
+function result(){
+   navigator("/AdmitCard");
+}
    
  function handleChange(e){
     const { name, value } = e.target;
@@ -58,10 +61,11 @@ console.log(cart);
 
     return(
         <>
-         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 bg-gray-200">
-            <h1 className="font-bold">Exam Page</h1>
+         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4 bg-gray-200">
+            <h1 className="font-bold text-2xl">Exam Page</h1>
             <button onClick={addtocart}>Test-I</button>
             <button onClick={test2}>Test-II</button>
+            <button onClick={result}>Result-View</button>
             <p className="text-blue-600 font-bold">Cart Items: {cart.length} & Test Items: {test.length}</p>
          </div>
          {/* ---------------------------------------------Test-1--------------------------------------------------- */}

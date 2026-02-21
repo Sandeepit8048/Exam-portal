@@ -10,18 +10,12 @@ import Index from './Index';
 function Nav() {
   return (
     <>
-  
 
      <nav className='flex gap-5 justify-center items-center h-16 bg-gray-300 text-lg font-semibold  '>
       <Link to="/" className='p-2'>Home</Link>
       <Link to="/Login" className='p-2'>Create-Account</Link>
       <Link to="/Signup" className='p-2'>Login</Link>
-      {/* <Link to="/Exam" className='p-2'>Exam</Link>
-      <Link to="/AdmitCard" className='p-2'>Result</Link> */}
       </nav>
-
-
-
 
 
          <Routes>

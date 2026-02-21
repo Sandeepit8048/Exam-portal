@@ -10,9 +10,7 @@ function AdmitCard(){
            if(responce){
             setCopy(JSON.parse(responce));
            }
-        //   setCopy(responce);
 
-        //   console.log(responce);
     }
 
     useEffect(()=>{
@@ -23,12 +21,9 @@ function AdmitCard(){
 
     return(
      <>
-     <h1>Answer-Sheet</h1>
-       
-       {/* <p>{item.copy} </p> */}
+     <h1 className="text-center text-2xl font-bold text-blue-600">Answer-Sheet</h1>
 
-
-       
+   
         {
         Object.entries(copy).map(([key, value], index) => (
           <div key={index} className="mt-1" >
