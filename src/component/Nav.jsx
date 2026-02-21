@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link,   Routes, Route } from 'react-router-dom';
 import Login from './Login';
-import Signup from './signup';
+import Signup from './Signup';
 import Exam from './Exam';
 import AdmitCard from './AdmitCard'
 import Index from './Index';
