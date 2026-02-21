@@ -61,7 +61,7 @@ console.log(cart);
 
     return(
         <>
-         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4 bg-gray-200">
+         <div className="sm:grid sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4 bg-gray-200">
             <h1 className="font-bold text-2xl">Exam Page</h1>
             <button onClick={addtocart}>Test-I</button>
             <button onClick={test2}>Test-II</button>

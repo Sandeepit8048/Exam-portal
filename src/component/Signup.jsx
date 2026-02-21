@@ -59,12 +59,12 @@ function Signup() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <div className="sm:min-h-screen sm:flex sm:flex-col sm:items-center sm:justify-center bg-gray-100">
 
       {/* Card */}
       <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-sm">
 
-        <h2 className="text-2xl font-bold text-center mb-4">
+        <h2 className="sm:text-2xl font-bold text-center mb-4">
          Login-Page
         </h2>
 

@@ -11,7 +11,7 @@ function Nav() {
   return (
     <>
 
-     <nav className='flex gap-5 justify-center items-center h-16 bg-gray-300 text-lg font-semibold  '>
+     <nav className='sm:flex sm:w-full  gap-5 sm:justify-center sm:items-center h-16 bg-gray-300 text-lg font-semibold  '>
       <Link to="/" className='p-2'>Home</Link>
       <Link to="/Login" className='p-2'>Create-Account</Link>
       <Link to="/Signup" className='p-2'>Login</Link>

@@ -39,12 +39,12 @@ function Login() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <div className="sm:min-h-screen sm:flex sm:flex-col sm:items-center sm:justify-center bg-gray-100">
 
       {/* Login Card */}
       <div className="bg-white shadow-xl rounded-lg p-6 w-full max-w-sm">
 
-        <h2 className="text-2xl font-bold text-center mb-5 text-gray-800">
+        <h2 className="sm:text-2xl font-bold text-center mb-5 text-gray-800">
           Create-Account
         </h2>
 
