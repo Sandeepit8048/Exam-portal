@@ -1,18 +1,40 @@
 import React from 'react'
-import Nav from './Nav';
 import IMG from '../assets/File-Pages.jpg'
+
 function Index() {
   return (
-   <>
-     <div className="box justify-items-center  " >
-      <h1>Welcome to the Exam Portal</h1>
-      <div className='flex  space-x-6 '><p>Please navigate to the Login or Signup page to access your account and take the exam</p>
-      <img src={IMG} alt="Exam Portal" className="w-80 h-90 mt-4 rounded-lg shadow-md" /></div>
-      <h4>Simply Powerful </h4>
-       <h1>Online Exams</h1>
+    <>
+      <div className="box flex items-center justify-center gap-50 p-10  ">
 
-     </div>
-   </>
+        <div className="text-left space-y-4 shadow-md p-10 rounded-lg space-y-15 ">
+          <h1 className="text-8xl font-semibold">
+            Simply Powerful
+          </h1>
+
+          <h1 className="text-5xl font-semibold">
+            Online Exams
+          </h1>
+
+          <h1 className="font-bold text-lg">
+            Welcome to the Exam Portal
+          </h1>
+
+          <p className="font-bold text-md">
+            Please navigate to the Login or Signup page to access your account and take the exam
+          </p>
+
+
+        </div>
+          <div>
+          <img
+            src={IMG}
+            alt="Exam Portal"
+            className="w-100 h-100 rounded-lg "
+          />
+        </div>
+
+      </div>
+    </>
   )
 }
 
