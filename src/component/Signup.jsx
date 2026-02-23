@@ -47,7 +47,7 @@ function Signup() {
 
     if (finddata) {
       alert("Login Successful ✅");
-      navigate("/Exam");
+      navigate("/Storage");
     } else {
       alert("Wrong Username or Password ❌");
     }

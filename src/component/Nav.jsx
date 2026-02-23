@@ -5,7 +5,8 @@ import Signup from './Signup';
 import Exam from './Exam';
 import AdmitCard from './AdmitCard'
 import Index from './Index';
-
+import Storage from './Storage';
+import Admin from './Admin';
 
 function Nav() {
   return (
@@ -15,6 +16,7 @@ function Nav() {
       <Link to="/" className='p-2'>Home</Link>
       <Link to="/Login" className='p-2'>Create-Account</Link>
       <Link to="/Signup" className='p-2'>Login</Link>
+      <Link to="/Admin" className='p-2'>Admin</Link>
       </nav>
 
 
@@ -24,6 +26,8 @@ function Nav() {
           <Route path="/Signup" element={ <Signup/> } />
             <Route path="/AdmitCard" element={<AdmitCard />} />
             <Route path="/Exam" element={<Exam/>} />
+            <Route path="/Storage" element={<Storage/>} />
+            <Route path="/Admin" element={<Admin/>} />
          </Routes>
        
      

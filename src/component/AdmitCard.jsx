@@ -5,7 +5,7 @@ function AdmitCard(){
     const [copy, setCopy] = useState({});
 
     function sheet(){
-        const responce = localStorage.getItem("ans")
+        const responce = localStorage.getItem("store")
 
            if(responce){
             setCopy(JSON.parse(responce));
