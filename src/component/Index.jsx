@@ -3,7 +3,7 @@ import IMG from '../assets/ans.jpeg'
 function Index() {
   return (
     <>
-      <div className="box sm:flex sm:items-center sm:justify-center sm:p-5 gap-5  sm:w-full sm:h-screen bg-gradient-to-r from-white-500 to-blue-800  ">
+      <div className="box sm:flex sm:items-center sm:justify-center sm:p-5 gap-5  sm:w-full sm:h-screen bg-gradient-to-r from-white-700 to-blue-900  ">
 
         <div className="text-left space-y-4 shadow-lg p-8 rounded-lg space-y-12 bg-white   ">
           <h1 className="sm:text-8xl font-semibold">

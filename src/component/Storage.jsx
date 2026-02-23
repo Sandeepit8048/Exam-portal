@@ -67,9 +67,10 @@ function Storage() {
 
   return (
     <>
-     <div className="sm:boxbtn p-4 m-4 border-2 border-gray-400 rounded-lg bg-gray-100">
+     <div className="sm:boxbtn p-4  border-2 border-gray-400 rounded-lg bg-gray-100 sm:w-full sm:h-screen bg-gradient-to-r from-orange-200 to-400">
                
-        <b>{allques[data][0]}</b> <br />
+       <div className="box sm:flex sm:flex-col sm:items-center sm:justify-center gap-4 p-4 ">
+           <b>{allques[data][0]}</b> <br />
         
         <b>{allques[data][1]} </b> <br />
         <input type="text" placeholder='Answer' name='answer' onChange={handleChange} value={quesdata.answer} className='bg-white border border-gray-300 rounded-md p-2 w-full' /><br/>
@@ -78,6 +79,7 @@ function Storage() {
             <button type='submit' onClick={handleSubmit} className='bg-blue-500 text-white px-4 py-2 rounded-md'>Save</button>
             <button type='button' onClick={nextbtn} className='bg-green-500 text-white px-4 py-2 rounded-md'>Next</button>
         </div>
+       </div>
           
      </div>
 
