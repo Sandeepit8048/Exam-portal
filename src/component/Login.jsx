@@ -39,7 +39,7 @@ function Login() {
   }
 
   return (
-    <div className="sm:min-h-screen sm:flex sm:flex-col sm:items-center sm:justify-center bg-gray-100">
+    <div className="sm:min-h-screen sm:flex sm:flex-col sm:items-center sm:justify-center bg-gradient-to-r from-red-100 to-yellow-100">
 
       {/* Login Card */}
       <div className="bg-white shadow-xl rounded-lg p-6 w-full max-w-sm">

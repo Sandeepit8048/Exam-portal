@@ -67,16 +67,16 @@ function Storage() {
 
   return (
     <>
-     <div className="boxbtn p-4 m-4 border-2 border-gray-400 rounded-lg">
+     <div className="sm:boxbtn p-4 m-4 border-2 border-gray-400 rounded-lg bg-gray-100">
                
         <b>{allques[data][0]}</b> <br />
         
         <b>{allques[data][1]} </b> <br />
-        <input type="text" placeholder='Answer' name='answer' onChange={handleChange} value={quesdata.answer} /><br/>
+        <input type="text" placeholder='Answer' name='answer' onChange={handleChange} value={quesdata.answer} className='bg-white border border-gray-300 rounded-md p-2 w-full' /><br/>
 
         <div className="btn flex gap-2 mt-2">
-            <button type='submit' onClick={handleSubmit}>Save</button>
-            <button type='button' onClick={nextbtn}>Next</button>
+            <button type='submit' onClick={handleSubmit} className='bg-blue-500 text-white px-4 py-2 rounded-md'>Save</button>
+            <button type='button' onClick={nextbtn} className='bg-green-500 text-white px-4 py-2 rounded-md'>Next</button>
         </div>
           
      </div>
