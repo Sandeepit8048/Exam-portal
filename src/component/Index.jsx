@@ -26,19 +26,20 @@ function Index() {
             </p>
           </div>
         </div>
-        
+
 
         {/* Right Side White */}
-         <div className="w-1/2 flex items-center justify-center bg-white">
-          <img src={IMG} alt="Exam Portal" className="rounded-lg"/>
+        <div className="w-1/2 flex items-center justify-center bg-white">
+          <img src={IMG} alt="Exam Portal" className="rounded-lg b-20 " style={{ width: '600px', height: '550px' }} />
         </div>
-          {/* <div className="absolute bottom-10 w-full flex justify-center">
-          <button className="px-8 py-3 bg-red-500 text-white font-semibold rounded-lg shadow-lg 
-          hover:bg-green-500 hover:scale-110 transition duration-300  text-xl ">
-            Create Account 
-          </button> 
+
+        {/* <div className="absolute bottom-10 w-full flex justify-center">
+          <button className="px-8 py-3 bg-red-300 text-black  text-xl font-semibold rounded-lg 
+              hover:bg-green-500 hover:scale-110 transition duration-300">
+            Create Account
+          </button>
         </div> */}
-           
+
       </div>
     </>
   )

@@ -10,7 +10,7 @@ app.use(Express.json())
 
 app.post('/exam', async (req, res) => {
     try {
-        const { answer } = req.body;
+        const {answer} = req.body;
         const ans = new quesdata({
             answer
         })

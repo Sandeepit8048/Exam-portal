@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { data } from "react-router-dom";
 
 function Login() {
   const [logindata, setLogindata] = useState({
@@ -11,10 +12,27 @@ function Login() {
     return save ? JSON.parse(save) : [];
   });
 
+  // const [post, setPost] = useState();
+
   // Save to localStorage
   useEffect(() => {
     localStorage.setItem("store", JSON.stringify(store));
-  }, [store]);
+   
+    // async function postdata(){
+    //   const res = await fetch('http://localhost:3000/exam')
+    //   const data = await res.json();
+
+    //   setPost(data);
+
+    // }
+
+    
+  
+    // postdata()
+  },[store]);
+   
+
+  // console.log(post)
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -23,6 +41,11 @@ function Login() {
       ...logindata,
       [name]: value,
     });
+
+    // setPost({
+    //   ...post,
+    //   [name]:value
+    // })
   }
 
   function handleSubmit(e) {
