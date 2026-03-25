@@ -22,25 +22,6 @@ function Admin() {
         }
     }
 
-    //  function handleSubmit(){
-    //         navigate("/AdmitCard");
-    //  }
-
-     
-
-//   return (
-//     <div className='sm:flex sm:flex-col items-center justify-center mt-10 p-4 gap-6'>
-//         <h1 className='sm:text-3xl font-bold text-center '>Admin</h1>
-//          <form action="" onSubmit={handleSubmit} className='sm:flex sm:flex-col sm:justify-center sm:items-center sm:text-center  gap-4 w-70 h-auto bg-gray-200 p-4 rounded-md shadow-lg' > 
-//             <label htmlFor="" className='font-bold text-xl '>User-name</label>
-//             <input type="text" name="user" id="" onChange={(e) => setAdmindata({...admindata, user:e.target.value})} className='bg-white sm:border border-gray-300 sm:rounded-md p-2 w-full' />
-//             <label htmlFor="" className='font-bold text-xl' >Password</label>
-//             <input type="password" name="password" id="" onChange={(e) => setAdmindata({...admindata, password:e.target.value})} className='bg-white sm:border border-gray-300 sm:rounded-md p-2 w-full' />
-//             <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-200">Login</button>
-//          </form>
-//     </div>
-//   )
-
 
     return (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-100 to-purple-100 px-4">

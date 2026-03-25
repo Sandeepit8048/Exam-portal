@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link,   Routes, Route } from 'react-router-dom';
+import { Link, Routes, Route } from 'react-router-dom';
 import Login from './Login';
 import Signup from './Signup';
 import Exam from './Exam';
@@ -11,26 +11,29 @@ import Admin from './Admin';
 function Nav() {
   return (
     <>
+      <div className=''>
 
-     <nav className='sm:flex sm:w-full  gap-5 sm:justify-center sm:items-center h-16 bg-gray-300 text-lg font-semibold  '>
-      <Link to="/" className='p-2'>Home</Link>
-      <Link to="/Login" className='p-2'>Create-Account</Link>
-      <Link to="/Signup" className='p-2'>Login</Link>
-      <Link to="/Admin" className='p-2'>Admin</Link>
-      </nav>
+        <nav className='sm:flex sm:w-full  gap-5 sm:justify-center sm:items-center h-16 bg-pink-200 text-lg font-semibold shadow z-[999] '>
+          <span><Link to="/" className='p-2 ' >Home</Link></span>
+          <Link to="/Login" className='p-2'>Create-Account</Link>
+          <Link to="/Signup" className='p-2'>Login</Link>
+          <Link to="/Admin" className='p-2'>Admin</Link>
+        </nav>
 
 
-         <Routes>
-          <Route path='/' element={<Index/>}/>
-          <Route path="/Login" element={<Login/>} />
-          <Route path="/Signup" element={ <Signup/> } />
-            <Route path="/AdmitCard" element={<AdmitCard />} />
-            <Route path="/Exam" element={<Exam/>} />
-            <Route path="/Storage" element={<Storage/>} />
-            <Route path="/Admin" element={<Admin/>} />
-         </Routes>
-       
-     
+        <Routes>
+          <Route path='/' element={<Index />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/AdmitCard" element={<AdmitCard />} />
+          <Route path="/Exam" element={<Exam />} />
+          <Route path="/Storage" element={<Storage />} />
+          <Route path="/Admin" element={<Admin />} />
+        </Routes>
+
+      </div>
+
+
     </>
   )
 }
