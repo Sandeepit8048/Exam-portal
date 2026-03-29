@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { data } from "react-router-dom";
-import cors from "cors";
-import { response } from "express";
+
 
 function Login() {
   const [logindata, setLogindata] = useState({
@@ -9,12 +8,13 @@ function Login() {
     password: "",
   });
 
+
+  /**********Load from localStorage******/
+
   // const [store, setStore] = useState(() => {
   //   const save = localStorage.getItem("store");
   //   return save ? JSON.parse(save) : [];
   // });
-
-  // const [post, setPost] = useState();
 
   // Save to localStorage
   // useEffect(() => {
@@ -22,10 +22,7 @@ function Login() {
   // },[store]);
    
    
-
-
-
-  // console.log(post)
+ 
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -40,8 +37,8 @@ function Login() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const updatestore = [...store, logindata];
-    setStore(updatestore);
+    const updatestore = [ logindata];
+    setLogindata(updatestore);
 
     // Reset form
     setLogindata({
@@ -122,7 +119,7 @@ function Login() {
       </div>
 
       {/* Stored Users */}
-      {store.length > 0 && (
+      {/* {store.length > 0 && (
         <div className="mt-6 bg-white shadow-md rounded-lg p-4 w-full max-w-sm">
 
           <h3 className="text-lg font-bold text-center mb-3">
@@ -146,7 +143,7 @@ function Login() {
             </div>
           ))}
         </div>
-      )}
+      )} */}
 
     </div>
   );
