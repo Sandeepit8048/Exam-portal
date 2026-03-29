@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { data } from "react-router-dom";
 import cors from "cors";
+import { response } from "express";
 
 function Login() {
   const [logindata, setLogindata] = useState({
@@ -8,17 +9,17 @@ function Login() {
     password: "",
   });
 
-  const [store, setStore] = useState(() => {
-    const save = localStorage.getItem("store");
-    return save ? JSON.parse(save) : [];
-  });
+  // const [store, setStore] = useState(() => {
+  //   const save = localStorage.getItem("store");
+  //   return save ? JSON.parse(save) : [];
+  // });
 
   // const [post, setPost] = useState();
 
   // Save to localStorage
-  useEffect(() => {
-    localStorage.setItem("store", JSON.stringify(store));
-  },[store]);
+  // useEffect(() => {
+  //   localStorage.setItem("store", JSON.stringify(store));
+  // },[store]);
    
    
 
@@ -34,10 +35,6 @@ function Login() {
       [name]: value,
     });
 
-    // setPost({
-    //   ...post,
-    //   [name]:value
-    // })
   }
 
   function handleSubmit(e) {
@@ -63,6 +60,8 @@ function Login() {
 
 
   }
+
+
 
   return (
     <div className="sm:min-h-screen sm:flex sm:flex-col sm:items-center sm:justify-center bg-gradient-to-r from-red-100 to-yellow-100">
