@@ -24,19 +24,27 @@ function AdmitCard(){
      <h1 className="text-center text-2xl font-bold text-blue-600">Answer-Sheet</h1>
 
    
-        {
-        Object.entries(copy).map(([key, value], index) => (
-          <div key={index} className="mt-1" >
-            <div className=" justify-item-center ">
-              <b>{key}:</b>{" "} 
-             <p className=" p-2 "> {typeof value === "object"
-                ? JSON.stringify(value)
-                : value}
-                </p>
-            </div>
-          </div>
-        ))
-      }
+<div className="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-5 border border-gray-200 hover:shadow-xl transition duration-300">
+
+
+  {Object.entries(copy).map(([key, value], index) => (
+    <div
+      key={index}
+      className="flex justify-between items-start bg-gray-50 p-3 rounded-lg mb-2 hover:bg-gray-100 transition "
+    >
+      <span className="font-semibold text-gray-700 capitalize">
+        {key}:
+      </span>
+
+      <span className="text-gray-600 text-right break-words max-w-[60%]">
+        {typeof value === "object"
+          ? JSON.stringify(value)
+          : value}
+      </span>
+    </div>
+  ))}
+
+</div>
 
 
      </>

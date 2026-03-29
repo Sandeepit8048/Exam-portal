@@ -3,6 +3,7 @@ import { data } from "react-router-dom";
 
 
 function Login() {
+  
   const [logindata, setLogindata] = useState({
     user: "",
     password: "",
@@ -10,7 +11,6 @@ function Login() {
 
 
   /**********Load from localStorage******/
-
   // const [store, setStore] = useState(() => {
   //   const save = localStorage.getItem("store");
   //   return save ? JSON.parse(save) : [];
@@ -22,8 +22,6 @@ function Login() {
   // },[store]);
    
    
- 
-
   function handleChange(e) {
     const { name, value } = e.target;
 
@@ -54,11 +52,7 @@ function Login() {
       },
       body: JSON.stringify(logindata)
     })
-
-
   }
-
-
 
   return (
     <div className="sm:min-h-screen sm:flex sm:flex-col sm:items-center sm:justify-center bg-gradient-to-r from-red-100 to-yellow-100">
@@ -119,6 +113,7 @@ function Login() {
       </div>
 
       {/* Stored Users */}
+
       {/* {store.length > 0 && (
         <div className="mt-6 bg-white shadow-md rounded-lg p-4 w-full max-w-sm">
 

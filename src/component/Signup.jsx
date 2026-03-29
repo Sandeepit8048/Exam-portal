@@ -7,23 +7,22 @@ function Signup() {
     user: "",
     password: "",
   });
-  
+
   const navigate = useNavigate();
 
   useEffect(() => {
     loadData();
   }, []);
-  
- 
 
-  function loadData() {
-     const response = JSON.parse(localStorage.getItem("store")) || [];
-     setSignupdata(response);
 
-    if (response && response.length > 0) {
-      setSignupdata(response);
-    } else {
-      console.log("No signup data found");
+
+  async function loadData() {
+    try {
+      const response = await fetch("http://localhost:3000/exam");
+      const data = await response.json();
+      setSignupdata(data);
+    } catch (error) {
+      console.log("Error:", error);
     }
   }
 
@@ -52,10 +51,11 @@ function Signup() {
       alert("Wrong Username or Password ❌");
     }
 
-      setStore({
-        user: "",
-        password: "",
-      });
+    setStore({
+      user: "",
+      password: "",
+    });
+
   }
 
   return (
@@ -65,7 +65,7 @@ function Signup() {
       <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-sm">
 
         <h2 className="sm:text-2xl font-bold text-center mb-4">
-         Login-Page
+          Login-Page
         </h2>
 
         {/* Form */}
@@ -81,7 +81,7 @@ function Signup() {
               type="text"
               name="user"
               placeholder="Enter username"
-              value={store.user} 
+              value={store.user}
               onChange={handleChange}
               className="w-full mt-1 px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
@@ -117,7 +117,7 @@ function Signup() {
       </div>
 
       {/* Show Stored Users */}
-     
+
 
     </div>
   );
