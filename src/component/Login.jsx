@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { data } from "react-router-dom";
+import cors from "cors";
 
 function Login() {
   const [logindata, setLogindata] = useState({
@@ -17,20 +18,11 @@ function Login() {
   // Save to localStorage
   useEffect(() => {
     localStorage.setItem("store", JSON.stringify(store));
-   
-    // async function postdata(){
-    //   const res = await fetch('http://localhost:3000/exam')
-    //   const data = await res.json();
-
-    //   setPost(data);
-
-    // }
-
-    
-  
-    // postdata()
   },[store]);
    
+   
+
+
 
   // console.log(post)
 
@@ -59,6 +51,17 @@ function Login() {
       user: "",
       password: "",
     });
+   
+
+    const response = fetch("http://localhost:3000/exam", {
+      method: "POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify(logindata)
+    })
+
+
   }
 
   return (

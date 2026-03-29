@@ -56,7 +56,6 @@ function Exam() {
    }
 
 
-
    console.log(cart);
 
    return (

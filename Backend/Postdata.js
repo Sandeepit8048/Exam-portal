@@ -1,18 +1,25 @@
 import Express from 'express'
 import connectDB from './mongoDB/Mongoconnect.js'
-import quesdata from './module/Schemadata.js'
+// import quesdata from './module/Schemadata.js'
+import login from './module/Login.js'
+import cors from 'cors';
 
 connectDB();
 
 const app = Express();
+app.use(cors());
 
 app.use(Express.json())
 
+app.use("/exam", Express.Router());
+
+
 app.post('/exam', async (req, res) => {
     try {
-        const {answer} = req.body;
-        const ans = new quesdata({
-            answer
+        const {user, password} = req.body;
+        const ans = new login({
+            user,
+            password
         })
         const newAns = await ans.save();
         res.json(newAns);
