@@ -68,7 +68,8 @@ function Storage() {
 
    /*-------------------------------------------------- fetch the data  --------------------------------- */
    const [fetchques, setFetchQues] = useState([]);
-
+   const [fetchdata, setFetchData] = useState(0);
+    const [answer, setAnswer] = useState("");
     useEffect(()=>{
           const fetchData = async()=>{
             try {
@@ -83,7 +84,18 @@ function Storage() {
         fetchData();
 
     },[])
- 
+   
+    function nextbtn(){
+        if(fetchdata < fetchques.length-1){
+            setFetchData(fetchdata+1);
+        }
+    }
+
+    function prevbtn(){
+        if(fetchdata > 0){
+            setFetchData(fetchdata-1);
+        }
+    }
   
  
 
@@ -105,17 +117,54 @@ function Storage() {
           
      </div>
 
-
+    {/*----------------------------------------- Fetched Questions------------------------------------------------------- */}
      <div>
-        <h1 className='text-2xl font-bold mb-4'>Fetched Questions:</h1>
-        {
-            fetchques.map((item, index) => (
-                <div key={index} className='mb-4 p-4 border border-gray-300 rounded-md'>
-                    <p><strong>Question:</strong> {item.question}</p>
-                    <p><strong>Options:</strong> {item.option}</p>
-                </div>
-            ))
-        }
+        <div className="p-4 border-2 border-gray-400 rounded-lg bg-gray-100 w-full min-h-screen">
+        <div className="flex flex-col items-center justify-center gap-4 p-4">
+          <h1 className="text-2xl font-bold">Fetched Question</h1>
+
+          {fetchques.length > 0 ? (
+            <div className="w-full max-w-xl bg-white p-4 rounded shadow">
+              <p>
+                <strong>Question {fetchdata + 1}:</strong>{" "}
+                {fetchques[fetchdata].question}
+              </p>
+
+              <p className="mt-2">
+                <strong>Options:</strong> {fetchques[fetchdata].option}
+              </p>
+
+              <input
+                type="text"
+                placeholder="Write your answer"
+                value={answer}
+                onChange={(e) => setAnswer(e.target.value)}
+                className="bg-white border border-gray-300 rounded-md p-2 w-full mt-4"
+              />
+
+              <div className="flex gap-2 mt-4">
+              
+
+                <button
+                  onClick={prevbtn}
+                  className="bg-gray-500 text-white px-4 py-2 rounded-md"
+                >
+                  Prev
+                </button>
+
+                <button
+                  onClick={nextbtn}
+                  className="bg-green-500 text-white px-4 py-2 rounded-md"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          ) : (
+            <p>Loading questions...</p>
+          )}
+        </div>
+      </div>
      </div>
 
     </>
