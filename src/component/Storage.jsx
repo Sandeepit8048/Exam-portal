@@ -30,7 +30,8 @@ function Storage() {
     /*-------------------------------------------------- Save btn to store the answer --------------------------------- */
 
     const [quesdata, setQuesData] = useState({
-       answer :""
+       answer :" "
+       
     });
     
     
@@ -58,9 +59,30 @@ function Storage() {
         setQuesData({
             answer:" "
         });
-        
+         
+        nextbtn();
+
     }
    console.log(store);
+
+
+   /*-------------------------------------------------- fetch the data  --------------------------------- */
+   const [fetchques, setFetchQues] = useState([]);
+
+    useEffect(()=>{
+          const fetchData = async()=>{
+            try {
+                const response = await fetch('http://localhost:2000/ques');
+                const data = await response.json();
+                setFetchQues(data);
+                console.log(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+        fetchData();
+
+    },[])
  
   
  
@@ -81,6 +103,19 @@ function Storage() {
         </div>
        </div>
           
+     </div>
+
+
+     <div>
+        <h1 className='text-2xl font-bold mb-4'>Fetched Questions:</h1>
+        {
+            fetchques.map((item, index) => (
+                <div key={index} className='mb-4 p-4 border border-gray-300 rounded-md'>
+                    <p><strong>Question:</strong> {item.question}</p>
+                    <p><strong>Options:</strong> {item.option}</p>
+                </div>
+            ))
+        }
      </div>
 
     </>

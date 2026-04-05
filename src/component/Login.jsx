@@ -45,7 +45,7 @@ function Login() {
     });
    
 
-    const response = fetch("http://localhost:3000/exam", {
+    const response = fetch("http://localhost:2000/exampost", {
       method: "POST",
       headers:{
         "Content-Type":"application/json"
@@ -112,33 +112,7 @@ function Login() {
         </form>
       </div>
 
-      {/* Stored Users */}
-
-      {/* {store.length > 0 && (
-        <div className="mt-6 bg-white shadow-md rounded-lg p-4 w-full max-w-sm">
-
-          <h3 className="text-lg font-bold text-center mb-3">
-            Saved Users
-          </h3>
-
-          {store.map((e, id) => (
-            <div
-              key={id}
-              className="border-b last:border-none py-2 text-sm"
-            >
-              <p>
-                <span className="font-semibold">Username:</span>{" "}
-                {e.user}
-              </p>
-
-              <p>
-                <span className="font-semibold">Password:</span>{" "}
-                {e.password}
-              </p>
-            </div>
-          ))}
-        </div>
-      )} */}
+      
 
     </div>
   );

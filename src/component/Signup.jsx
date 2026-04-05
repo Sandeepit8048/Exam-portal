@@ -18,7 +18,7 @@ function Signup() {
 
   async function loadData() {
     try {
-      const response = await fetch("http://localhost:3000/exam");
+      const response = await fetch("http://localhost:2000/exam");
       const data = await response.json();
       setSignupdata(data);
     } catch (error) {
