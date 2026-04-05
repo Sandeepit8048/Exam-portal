@@ -7,6 +7,7 @@ import AdmitCard from './AdmitCard'
 import Index from './Index';
 import Storage from './Storage';
 import Admin from './Admin';
+import Ques from './Ques';
 
 function Nav() {
 
@@ -62,6 +63,7 @@ function Nav() {
           <Route path="/AdmitCard" element={<AdmitCard />} />
           <Route path="/Exam" element={<Exam />} />
           <Route path="/Storage" element={<Storage />} />
+           <Route path="/Ques" element={<Ques />} />
           <Route path="/Admin" element={<Admin />} />
         </Routes>
       </div>
