@@ -30,6 +30,7 @@ function Ques() {
             setFetchData(fetchdata - 1);
         }
     }
+    console.log(answer)
 
     return (
         <>
@@ -41,10 +42,10 @@ function Ques() {
 
                         {fetchques.length > 0 ? (
                             <div className="w-full max-w-xl bg-white p-4 rounded shadow">
-                                <p>
+                                <h2  className="text-lg font-semibold">
                                     <strong>Question {fetchdata + 1}: </strong>
                                     {fetchques[fetchdata].question}
-                                </p>
+                                </h2>
 
                                 <div className="mt-2">
                                     <strong>Options:</strong>
@@ -58,7 +59,7 @@ function Ques() {
                                                     value={opt}
                                                     onChange={(e) => setAnswer(e.target.value)}
                                                 />
-                                                {opt}
+                                                {opt} 
                                             </label>
                                         ))}
                                     </div>
