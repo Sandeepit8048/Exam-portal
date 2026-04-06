@@ -45,7 +45,7 @@ function Login() {
     });
    
 
-    const response = fetch("http://localhost:2000/exampost", {
+    const response = fetch("https://exam-portal-q6qe.onrender.com/exampost", {
       method: "POST",
       headers:{
         "Content-Type":"application/json"
