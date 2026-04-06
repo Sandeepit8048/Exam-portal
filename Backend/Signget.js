@@ -30,6 +30,21 @@ app.post('/exampost', async (req, res) => {
     }
 }),
 
+app.post ('/answer', async (req, res)=>{
+    try{
+        const {answer} = req.body;
+        const ans = new quesdata({
+            answer
+        })
+        const newAns = await ans.save();
+        res.json(newAns);
+    }
+    catch(error){
+        console.log("Error saving data : ", error);
+        res.status(500).send("server Error")
+    }
+})
+
 app.get('/exam', async (req, res) => {
     try {
         const data = await login.find();
