@@ -18,7 +18,7 @@ function Signup() {
 
   async function loadData() {
     try {
-      const response = await fetch("http://localhost:2000/exam");
+      const response = await fetch("https://exam-portal-q6qe.onrender.com/exam");
       const data = await response.json();
       setSignupdata(data);
     } catch (error) {
