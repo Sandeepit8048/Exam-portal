@@ -1,0 +1,10 @@
+import mongoose from "mongoose";
+
+const  answersheet = new mongoose.Schema({
+     answer:String,
+      user:String,
+})
+
+const Resultcard= mongoose.model("answersheet", answersheet)
+
+export default Resultcard;

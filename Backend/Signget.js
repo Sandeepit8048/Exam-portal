@@ -4,6 +4,7 @@ import Express from "express";
 import cors from "cors";
 import login from "./module/Login.js";
 import quesdata from './module/ques.js'
+import Resultcard from "./module/ans.js";
 
 connectDB();
 
@@ -32,9 +33,10 @@ app.post('/exampost', async (req, res) => {
 
 app.post ('/answer', async (req, res)=>{
     try{
-        const {answer} = req.body;
-        const ans = new quesdata({
-            answer
+        const {answer, user} = req.body;
+        const ans = new Resultcard({
+            answer,
+            user
         })
         const newAns = await ans.save();
         res.json(newAns);
