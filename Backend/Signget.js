@@ -33,8 +33,9 @@ app.post('/exampost', async (req, res) => {
 
 app.post ('/answer', async (req, res)=>{
     try{
-        const {answer, user} = req.body;
+        const { question, answer, user} = req.body;
         const ans = new Resultcard({
+            question,
             answer,
             user
         })
