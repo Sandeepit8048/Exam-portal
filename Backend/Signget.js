@@ -47,6 +47,18 @@ app.post ('/answer', async (req, res)=>{
     }
 })
 
+
+app.get('/answerdata', async(req,res)=>{
+    try{
+        const data = await Resultcard.find();
+        res.json(data);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+})
+
+
+
 app.get('/exam', async (req, res) => {
     try {
         const data = await login.find();

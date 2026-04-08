@@ -4,17 +4,22 @@ function AdmitCard(){
 
     const [copy, setCopy] = useState({});
 
-    function sheet(){
-        const responce = localStorage.getItem("store")
+    // function sheet(){
+    //     const responce = localStorage.getItem("store")
 
-           if(responce){
-            setCopy(JSON.parse(responce));
-           }
+    //        if(responce){
+    //         setCopy(JSON.parse(responce));
+    //        }
 
-    }
+    // }
 
     useEffect(()=>{
-         sheet();
+        async function fetchdata(){
+          const res = await fetch('https://exam-portal-q6qe.onrender.com/answerdata');
+          const data = await res.json();
+          setCopy(data);
+        }
+        fetchdata();
     },[])
 
     console.log(copy);
