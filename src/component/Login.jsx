@@ -47,7 +47,7 @@ function Login() {
   return (
 
     <div className="min-h-screen flex items-center justify-center 
-    bg-gradient-to-r from-red-100 to-yellow-100 px-4">
+    bg-gradient-to-r from-red-500 to-yellow-200 px-4">
 
       {/* Login Card */}
 
