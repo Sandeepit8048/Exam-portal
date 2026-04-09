@@ -40,12 +40,8 @@ function AdmitCard(){
       <span className="font-semibold text-gray-700 capitalize">
         {key}:
       </span>
-
-      <span className="text-gray-600 text-right break-words max-w-[60%]">
-        {typeof value === "object"
-          ? JSON.stringify(value)
-          : value}
-      </span>
+       <span className="text-gray-600">{}</span>
+      <span className="text-gray-600">{value.question}<br/> {value.answer} </span>
     </div>
   ))}
 
