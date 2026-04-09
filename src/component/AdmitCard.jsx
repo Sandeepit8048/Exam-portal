@@ -26,10 +26,10 @@ function AdmitCard(){
 
     return(
      <>
-     <h1 className="text-center text-2xl font-bold text-blue-600">Answer-Sheet</h1>
+     <h1 className="text-center text-2xl font-bold  text-blue-600">Answer-Sheet</h1>
 
    
-<div className="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-5 border border-gray-200 hover:shadow-xl transition duration-300">
+<div className="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-5  mt-5 border border-gray-200 hover:shadow-xl transition duration-300">
 
 
   {Object.entries(copy).map(([key, value], index) => (
@@ -40,8 +40,8 @@ function AdmitCard(){
       <span className="font-semibold text-gray-700 capitalize">
         {key}:
       </span>
-       <span className="text-gray-600">{value.user}</span>
-      <span className="text-gray-600">{value.question}<br/>{value.answer} </span>
+       <span className="text-gray-600"></span>
+      <span className="text-gray-600">{value.user} <br />{value.question}<br/>{value.answer} </span>
     </div>
   ))}
 
