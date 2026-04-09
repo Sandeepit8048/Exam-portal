@@ -40,8 +40,8 @@ function AdmitCard(){
       <span className="font-semibold text-gray-700 capitalize">
         {key}:
       </span>
-       <span className="text-gray-600">{}</span>
-      <span className="text-gray-600">{value.question}<br/> {value.answer} </span>
+       <span className="text-gray-600">{value.user}</span>
+      <span className="text-gray-600">{value.question}<br/>{value.answer} </span>
     </div>
   ))}
 
