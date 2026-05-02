@@ -26,7 +26,7 @@ function Nav() {
         <div className='flex justify-between items-center h-16 px-4'>
 
           {/* Logo */}
-          <h1 className='font-bold text-xl'>Exam Portal</h1>
+          <h1 className='font-bold text-xl'> 🎓 Exam Portal</h1>
 
           {/* Desktop Menu */}
           <div className='hidden md:flex gap-5'>
